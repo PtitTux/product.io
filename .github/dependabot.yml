@@ -1,0 +1,10 @@
+# Basic configuration for Dependabot.
+version: 2
+updates:
+  # Enable version updates for npm dependencies.
+  - package-ecosystem: pnpm
+    # Look for updates to the package.json manifest file.
+    directory: /
+    # Check for updates daily.
+    schedule:
+      interval: daily
