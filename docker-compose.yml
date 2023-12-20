@@ -1,0 +1,33 @@
+version: '3.7'
+networks:
+  net:
+    driver: bridge
+services:
+  postgres:
+    image: postgres:bullseye
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 512m
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: manager
+    volumes:
+      - './dist/dockers/postgres:/var/lib/postgresql/data'
+    ports:
+      - 5432:5432
+    networks:
+      - net
+  rabbitmq:
+    image: rabbitmq:3.12-management
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: password
+    volumes:
+      - './dist/dockers/rabbitmq:/var/lib/rabbitmq'
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - net

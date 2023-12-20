@@ -1,0 +1,27 @@
+{
+  "name": "product.io",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "scripts": {
+    "prepare:dev": "docker-compose up",
+    "stop:dev": "docker-compose stop",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.4.6",
+    "eslint": "^8.56.0",
+    "lint-staged": "^15.2.0",
+    "simple-git-hooks": "^2.9.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
