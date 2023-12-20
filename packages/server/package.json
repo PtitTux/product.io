@@ -13,7 +13,7 @@
     "dev": "ts-node-dev ./src/app.ts | pino-pretty --colorize"
   },
   "dependencies": {
-    "fastify": "4.25.1",
+    "fastify": "4.25.0",
     "pino": "8.17.1"
   },
   "devDependencies": {
