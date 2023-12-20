@@ -8,10 +8,16 @@ updates:
     # Check for updates daily.
     schedule:
       interval: daily
+    labels:
+      - dependencies
+      - root
   # Enable version updates for npm dependencies.
   - package-ecosystem: npm
     # Look for updates to the package.json manifest file.
-    directory: /packages/*
+    directory: /packages/server
     # Check for updates daily.
     schedule:
       interval: daily
+    labels:
+      - dependencies
+      - server
