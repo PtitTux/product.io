@@ -9,38 +9,38 @@ importers:
   .:
     devDependencies:
       '@antfu/eslint-config':
-        specifier: ^2.4.6
+        specifier: 2.4.6
         version: 2.4.6(@vue/compiler-sfc@3.3.12)(eslint@8.56.0)(typescript@5.3.3)
       eslint:
-        specifier: ^8.56.0
+        specifier: 8.56.0
         version: 8.56.0
       lint-staged:
-        specifier: ^15.2.0
+        specifier: 15.2.0
         version: 15.2.0
       simple-git-hooks:
-        specifier: ^2.9.0
+        specifier: 2.9.0
         version: 2.9.0
 
   packages/server:
     dependencies:
       fastify:
-        specifier: ^4.25.0
-        version: 4.25.1
+        specifier: 4.25.0
+        version: 4.25.0
       pino:
-        specifier: ^8.17.1
+        specifier: 8.17.1
         version: 8.17.1
     devDependencies:
       '@types/node':
-        specifier: ^20.10.4
-        version: 20.10.5
+        specifier: 20.10.4
+        version: 20.10.4
       pino-pretty:
-        specifier: ^10.3.0
+        specifier: 10.3.0
         version: 10.3.0
       ts-node-dev:
-        specifier: ^2.0.0
-        version: 2.0.0(@types/node@20.10.5)(typescript@5.3.3)
+        specifier: 2.0.0
+        version: 2.0.0(@types/node@20.10.4)(typescript@5.3.3)
       typescript:
-        specifier: ^5.3.3
+        specifier: 5.3.3
         version: 5.3.3
 
 packages:
@@ -412,8 +412,8 @@ packages:
       '@types/unist': 2.0.10
     dev: true
 
-  /@types/node@20.10.5:
-    resolution: {integrity: sha512-nNPsNE65wjMxEKI93yOP+NPGGBJz/PoN3kZsVLee0XMiJolxSekEVD8wRwBUBqkwc7UWop0edW50yrCQW4CyRw==}
+  /@types/node@20.10.4:
+    resolution: {integrity: sha512-D08YG6rr8X90YB56tSIuBaddy/UXAA9RKJoFvrsnogAum/0pmjkgi4+2nx96A330FmioegBWmEYQ+syqCFaveg==}
     dependencies:
       undici-types: 5.26.5
     dev: true
@@ -1588,8 +1588,8 @@ packages:
     resolution: {integrity: sha512-eel5UKGn369gGEWOqBShmFJWfq/xSJvsgDzgLYC845GneayWvXBf0lJCBn5qTABfewy1ZDPoaR5OZCP+kssfuw==}
     dev: false
 
-  /fastify@4.25.1:
-    resolution: {integrity: sha512-D8d0rv61TwqoAS7lom2tvIlgVMlx88lLsiwXyWNjA7CU/LC/mx/Gp2WAlC0S/ABq19U+y/aRvYFG5xLUu2aMrg==}
+  /fastify@4.25.0:
+    resolution: {integrity: sha512-2XANZZDadl/PccnVbmrIC8BmUtb16MO5Hyfnqv1cZIslvf7GYTVwlPuVxLKL23NNxWRc5BikY8HyhWj+NJvokA==}
     dependencies:
       '@fastify/ajv-compiler': 3.5.0
       '@fastify/error': 3.4.1
@@ -2931,7 +2931,7 @@ packages:
       typescript: 5.3.3
     dev: true
 
-  /ts-node-dev@2.0.0(@types/node@20.10.5)(typescript@5.3.3):
+  /ts-node-dev@2.0.0(@types/node@20.10.4)(typescript@5.3.3):
     resolution: {integrity: sha512-ywMrhCfH6M75yftYvrvNarLEY+SUXtUvU8/0Z6llrHQVBx12GiFk5sStF8UdfE/yfzk9IAq7O5EEbTQsxlBI8w==}
     engines: {node: '>=0.8.0'}
     hasBin: true
@@ -2950,7 +2950,7 @@ packages:
       rimraf: 2.7.1
       source-map-support: 0.5.21
       tree-kill: 1.2.2
-      ts-node: 10.9.2(@types/node@20.10.5)(typescript@5.3.3)
+      ts-node: 10.9.2(@types/node@20.10.4)(typescript@5.3.3)
       tsconfig: 7.0.0
       typescript: 5.3.3
     transitivePeerDependencies:
@@ -2959,7 +2959,7 @@ packages:
       - '@types/node'
     dev: true
 
-  /ts-node@10.9.2(@types/node@20.10.5)(typescript@5.3.3):
+  /ts-node@10.9.2(@types/node@20.10.4)(typescript@5.3.3):
     resolution: {integrity: sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==}
     hasBin: true
     peerDependencies:
@@ -2978,7 +2978,7 @@ packages:
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.10.5
+      '@types/node': 20.10.4
       acorn: 8.11.2
       acorn-walk: 8.3.1
       arg: 4.1.3
