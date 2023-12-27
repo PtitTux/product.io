@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "fastify": "4.25.2",
-    "pino": "8.17.1"
+    "pino": "8.17.2"
   },
   "devDependencies": {
     "@types/node": "20.10.5",
