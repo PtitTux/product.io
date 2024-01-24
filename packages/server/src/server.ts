@@ -3,11 +3,16 @@ import path from 'node:path'
 import type { FastifyInstance } from 'fastify'
 import Fastify from 'fastify'
 import autoLoad from '@fastify/autoload'
+import { serializerCompiler, validatorCompiler } from 'fastify-type-provider-zod'
 
 export async function build() {
   const fastify: FastifyInstance = Fastify({
     logger: true,
   })
+
+  // Add schema validator and serializer
+  fastify.setValidatorCompiler(validatorCompiler)
+  fastify.setSerializerCompiler(serializerCompiler)
 
   const startPlugins = performance.now()
   await fastify.register(autoLoad, { dir: path.join(__dirname, 'plugins') })

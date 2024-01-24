@@ -1,16 +1,21 @@
 import fp from 'fastify-plugin'
 import fastifySwagger from '@fastify/swagger'
 import fastifySwaggerUI from '@fastify/swagger-ui'
+import { jsonSchemaTransform } from 'fastify-type-provider-zod'
+import { version } from '../../package.json'
 
 export default fp(async (fastify) => {
   await fastify.register(fastifySwagger, {
-    mode: 'dynamic',
     openapi: {
       info: {
-        title: 'API',
-        version: '1.0.0',
+        title: 'Product.io API',
+        version,
       },
+      tags: [
+        { name: 'projects', description: 'Projects related end-points' },
+      ],
     },
+    transform: jsonSchemaTransform,
   })
 
   await fastify.register(fastifySwaggerUI, {
@@ -21,5 +26,8 @@ export default fp(async (fastify) => {
       deepLinking: false,
     },
     staticCSP: true,
+    theme: {
+      title: 'API Documentation',
+    },
   })
 })
