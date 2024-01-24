@@ -44,6 +44,9 @@ importers:
       fastify-type-provider-zod:
         specifier: 1.1.9
         version: 1.1.9(fastify@4.25.2)(zod@3.22.4)
+      http-errors:
+        specifier: 2.0.0
+        version: 2.0.0
       pg:
         specifier: 8.11.3
         version: 8.11.3
@@ -54,6 +57,9 @@ importers:
         specifier: 3.22.4
         version: 3.22.4
     devDependencies:
+      '@types/http-errors':
+        specifier: 2.0.4
+        version: 2.0.4
       '@types/node':
         specifier: 20.11.5
         version: 20.11.5
@@ -489,6 +495,10 @@ packages:
 
   /@tsconfig/node16@1.0.4:
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
+    dev: true
+
+  /@types/http-errors@2.0.4:
+    resolution: {integrity: sha512-D0CFMMtydbJAegzOyHjtiKPLlvnm3iTZyZRSZoLq2mRhDdmLfIWOCYPfQJ4cu2erKghU++QvjcUjp/5h7hESpA==}
     dev: true
 
   /@types/json-schema@7.0.15:
