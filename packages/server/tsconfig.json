@@ -4,6 +4,7 @@
     "baseUrl": "./src",
     "module": "CommonJS",
     "moduleResolution": "Node",
+    "resolveJsonModule": true,
     "strict": true,
     "noImplicitAny": true,
     "outDir": "./dist",
