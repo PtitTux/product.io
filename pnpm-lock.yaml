@@ -55,8 +55,8 @@ importers:
         specifier: ^8.11.4
         version: 8.11.4
       pino-pretty:
-        specifier: 10.3.1
-        version: 10.3.1
+        specifier: 11.0.0
+        version: 11.0.0
       ts-node-dev:
         specifier: 2.0.0
         version: 2.0.0(@types/node@20.12.2)(typescript@5.4.3)
@@ -2949,8 +2949,8 @@ packages:
       readable-stream: 4.5.0
       split2: 4.2.0
 
-  /pino-pretty@10.3.1:
-    resolution: {integrity: sha512-az8JbIYeN/1iLj2t0jR9DV48/LQ3RC6hZPpapKPkb84Q+yTidMCpgWxIT3N0flnBDilyBQ1luWNpOeJptjdp/g==}
+  /pino-pretty@11.0.0:
+    resolution: {integrity: sha512-YFJZqw59mHIY72wBnBs7XhLGG6qpJMa4pEQTRgEPEbjIYbng2LXEZZF1DoyDg9CfejEy8uZCyzpcBXXG0oOCwQ==}
     hasBin: true
     dependencies:
       colorette: 2.0.20
