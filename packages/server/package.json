@@ -20,7 +20,7 @@
     "fastify": "4.26.2",
     "fastify-plugin": "^4.5.1",
     "pg": "^8.11.5",
-    "pino": "8.19.0"
+    "pino": "9.0.0"
   },
   "devDependencies": {
     "@types/node": "20.12.7",
