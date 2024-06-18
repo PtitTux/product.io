@@ -13,7 +13,7 @@
     "dev": "tsnd --respawn --transpile-only --exit-child src/server.ts | pino-pretty --colorize"
   },
   "dependencies": {
-    "@fastify/autoload": "^5.8.0",
+    "@fastify/autoload": "^5.10.0",
     "@fastify/swagger": "^8.14.0",
     "@fastify/swagger-ui": "^3.0.0",
     "dotenv": "^16.4.5",
