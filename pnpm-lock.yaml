@@ -55,8 +55,8 @@ importers:
         specifier: ^8.11.4
         version: 8.11.4
       pino-pretty:
-        specifier: 11.0.0
-        version: 11.0.0
+        specifier: 11.2.1
+        version: 11.2.1
       ts-node-dev:
         specifier: 2.0.0
         version: 2.0.0(@types/node@20.12.7)(typescript@5.4.5)
@@ -128,10 +128,6 @@ packages:
 
   '@babel/helper-string-parser@7.23.4':
     resolution: {integrity: sha512-803gmbQdqwdf4olxrX4AJyFBV/RTr3rSmOj0rKwesmzlfhYNDEs+/iOcznzpNWlJlIlTJC2QfPFcHB6DlzdVLQ==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/helper-validator-identifier@7.22.20':
-    resolution: {integrity: sha512-Y4OZ+ytlatR8AI+8KZfKuL5urKp7qey08ha31L8b3BwewJAoJamTzyvxPR/5D+KkdJCGPq/+8TukHBlY10FX9A==}
     engines: {node: '>=6.9.0'}
 
   '@babel/helper-validator-identifier@7.24.7':
@@ -1081,8 +1077,8 @@ packages:
   fast-content-type-parse@1.1.0:
     resolution: {integrity: sha512-fBHHqSTFLVnR61C+gltJuE5GkVQMV0S2nqUO8TJ+5Z3qAKG8vAx4FKai1s5jq/inV1+sREynIWSuQ6HgoSXpDQ==}
 
-  fast-copy@3.0.1:
-    resolution: {integrity: sha512-Knr7NOtK3HWRYGtHoJrjkaWepqT8thIVGAwt0p0aUs1zqkAzXZV4vo9fFNwyb5fcqK1GKYFYxldQdIDVKhUAfA==}
+  fast-copy@3.0.2:
+    resolution: {integrity: sha512-dl0O9Vhju8IrcLndv2eU4ldt1ftXMqqfgN4H1cpmGV7P6jeB9FwpN9a2c8DPGE1Ys88rNUJVYDHq73CGAGOPfQ==}
 
   fast-decode-uri-component@1.0.1:
     resolution: {integrity: sha512-WKgKWg5eUxvRZGwW8FvfbaH7AXSh2cL+3j5fMGzUMCxWBJ3dV3a7Wz8y2f/uQ0e3B6WmodD3oS54jTQ9HVTIIg==}
@@ -1718,9 +1714,6 @@ packages:
   pgpass@1.0.5:
     resolution: {integrity: sha512-FdW9r/jQZhSeohs1Z3sI1yxFQNFvMcnmfuj4WBMUTxOrAyLMaTcE1aAMBiTlbMNaXvBCQuVi0R7hd8udDSP7ug==}
 
-  picocolors@1.0.0:
-    resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
-
   picocolors@1.0.1:
     resolution: {integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==}
 
@@ -1740,8 +1733,8 @@ packages:
   pino-abstract-transport@1.1.0:
     resolution: {integrity: sha512-lsleG3/2a/JIWUtf9Q5gUNErBqwIu1tUKTT3dUzaf5DySw9ra1wcqKjJjLX1VTY64Wk1eEOYsVGSaGfCK85ekA==}
 
-  pino-pretty@11.0.0:
-    resolution: {integrity: sha512-YFJZqw59mHIY72wBnBs7XhLGG6qpJMa4pEQTRgEPEbjIYbng2LXEZZF1DoyDg9CfejEy8uZCyzpcBXXG0oOCwQ==}
+  pino-pretty@11.2.1:
+    resolution: {integrity: sha512-O05NuD9tkRasFRWVaF/uHLOvoRDFD7tb5VMertr78rbsYFjYp48Vg3477EshVAF5eZaEw+OpDl/tu+B0R5o+7g==}
     hasBin: true
 
   pino-std-serializers@6.2.2:
@@ -1996,6 +1989,9 @@ packages:
 
   sonic-boom@3.7.0:
     resolution: {integrity: sha512-IudtNvSqA/ObjN97tfgNmOKyDOs4dNcg4cUUsHDebqsgb8wGBBwb31LIgShNO8fye0dFI52X1+tFoKKI6Rq1Gg==}
+
+  sonic-boom@4.0.1:
+    resolution: {integrity: sha512-hTSD/6JMLyT4r9zeof6UtuBDpjJ9sO08/nmS5djaA9eozT9oOlNdpXSnzcgj4FTqpk3nkLrs61l4gip9r1HCrQ==}
 
   source-map-js@1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
@@ -2363,8 +2359,6 @@ snapshots:
 
   '@babel/helper-string-parser@7.23.4': {}
 
-  '@babel/helper-validator-identifier@7.22.20': {}
-
   '@babel/helper-validator-identifier@7.24.7': {}
 
   '@babel/highlight@7.23.4':
@@ -2380,7 +2374,7 @@ snapshots:
   '@babel/types@7.23.6':
     dependencies:
       '@babel/helper-string-parser': 7.23.4
-      '@babel/helper-validator-identifier': 7.22.20
+      '@babel/helper-validator-identifier': 7.24.7
       to-fast-properties: 2.0.0
 
   '@clack/core@0.3.4':
@@ -3503,7 +3497,7 @@ snapshots:
 
   fast-content-type-parse@1.1.0: {}
 
-  fast-copy@3.0.1: {}
+  fast-copy@3.0.2: {}
 
   fast-decode-uri-component@1.0.1: {}
 
@@ -4140,8 +4134,6 @@ snapshots:
     dependencies:
       split2: 4.2.0
 
-  picocolors@1.0.0: {}
-
   picocolors@1.0.1: {}
 
   picomatch@2.3.1: {}
@@ -4155,11 +4147,11 @@ snapshots:
       readable-stream: 4.5.0
       split2: 4.2.0
 
-  pino-pretty@11.0.0:
+  pino-pretty@11.2.1:
     dependencies:
       colorette: 2.0.20
       dateformat: 4.6.3
-      fast-copy: 3.0.1
+      fast-copy: 3.0.2
       fast-safe-stringify: 2.1.1
       help-me: 5.0.0
       joycon: 3.1.1
@@ -4169,7 +4161,7 @@ snapshots:
       pump: 3.0.0
       readable-stream: 4.5.0
       secure-json-parse: 2.7.0
-      sonic-boom: 3.7.0
+      sonic-boom: 4.0.1
       strip-json-comments: 3.1.1
 
   pino-std-serializers@6.2.2: {}
@@ -4204,7 +4196,7 @@ snapshots:
   postcss@8.4.32:
     dependencies:
       nanoid: 3.3.7
-      picocolors: 1.0.0
+      picocolors: 1.0.1
       source-map-js: 1.0.2
 
   postgres-array@2.0.0: {}
@@ -4393,6 +4385,10 @@ snapshots:
       is-fullwidth-code-point: 5.0.0
 
   sonic-boom@3.7.0:
+    dependencies:
+      atomic-sleep: 1.0.0
+
+  sonic-boom@4.0.1:
     dependencies:
       atomic-sleep: 1.0.0
 
