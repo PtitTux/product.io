@@ -49,8 +49,8 @@ importers:
         version: 8.19.0
     devDependencies:
       '@types/node':
-        specifier: 20.12.7
-        version: 20.12.7
+        specifier: 20.14.10
+        version: 20.14.10
       '@types/pg':
         specifier: ^8.11.4
         version: 8.11.4
@@ -59,7 +59,7 @@ importers:
         version: 11.0.0
       ts-node-dev:
         specifier: 2.0.0
-        version: 2.0.0(@types/node@20.12.7)(typescript@5.4.5)
+        version: 2.0.0(@types/node@20.14.10)(typescript@5.4.5)
       typescript:
         specifier: 5.4.5
         version: 5.4.5
@@ -128,10 +128,6 @@ packages:
 
   '@babel/helper-string-parser@7.23.4':
     resolution: {integrity: sha512-803gmbQdqwdf4olxrX4AJyFBV/RTr3rSmOj0rKwesmzlfhYNDEs+/iOcznzpNWlJlIlTJC2QfPFcHB6DlzdVLQ==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/helper-validator-identifier@7.22.20':
-    resolution: {integrity: sha512-Y4OZ+ytlatR8AI+8KZfKuL5urKp7qey08ha31L8b3BwewJAoJamTzyvxPR/5D+KkdJCGPq/+8TukHBlY10FX9A==}
     engines: {node: '>=6.9.0'}
 
   '@babel/helper-validator-identifier@7.24.7':
@@ -335,8 +331,8 @@ packages:
   '@types/mdast@3.0.15':
     resolution: {integrity: sha512-LnwD+mUEfxWMa1QpDraczIn6k0Ee3SMicuYSSzS6ZYl2gKS09EClnJYGd8Du6rfc5r/GZEk5o1mRb8TaTj03sQ==}
 
-  '@types/node@20.12.7':
-    resolution: {integrity: sha512-wq0cICSkRLVaf3UGLMGItu/PtdY7oaXaI/RVU+xliKVOtRna3PRY57ZDfztpDL0n11vfymMUnXv8QwYCO7L1wg==}
+  '@types/node@20.14.10':
+    resolution: {integrity: sha512-MdiXf+nDuMvY0gJKxyfZ7/6UFsETO7mGKF54MVD/ekJS6HdFtpZFBgrh6Pseu64XTb2MLyFPlbW6hj8HYRQNOQ==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -1718,9 +1714,6 @@ packages:
   pgpass@1.0.5:
     resolution: {integrity: sha512-FdW9r/jQZhSeohs1Z3sI1yxFQNFvMcnmfuj4WBMUTxOrAyLMaTcE1aAMBiTlbMNaXvBCQuVi0R7hd8udDSP7ug==}
 
-  picocolors@1.0.0:
-    resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
-
   picocolors@1.0.1:
     resolution: {integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==}
 
@@ -2363,8 +2356,6 @@ snapshots:
 
   '@babel/helper-string-parser@7.23.4': {}
 
-  '@babel/helper-validator-identifier@7.22.20': {}
-
   '@babel/helper-validator-identifier@7.24.7': {}
 
   '@babel/highlight@7.23.4':
@@ -2380,7 +2371,7 @@ snapshots:
   '@babel/types@7.23.6':
     dependencies:
       '@babel/helper-string-parser': 7.23.4
-      '@babel/helper-validator-identifier': 7.22.20
+      '@babel/helper-validator-identifier': 7.24.7
       to-fast-properties: 2.0.0
 
   '@clack/core@0.3.4':
@@ -2632,7 +2623,7 @@ snapshots:
     dependencies:
       '@types/unist': 2.0.10
 
-  '@types/node@20.12.7':
+  '@types/node@20.14.10':
     dependencies:
       undici-types: 5.26.5
 
@@ -2640,7 +2631,7 @@ snapshots:
 
   '@types/pg@8.11.4':
     dependencies:
-      '@types/node': 20.12.7
+      '@types/node': 20.14.10
       pg-protocol: 1.6.0
       pg-types: 4.0.1
 
@@ -4140,8 +4131,6 @@ snapshots:
     dependencies:
       split2: 4.2.0
 
-  picocolors@1.0.0: {}
-
   picocolors@1.0.1: {}
 
   picomatch@2.3.1: {}
@@ -4204,7 +4193,7 @@ snapshots:
   postcss@8.4.32:
     dependencies:
       nanoid: 3.3.7
-      picocolors: 1.0.0
+      picocolors: 1.0.1
       source-map-js: 1.0.2
 
   postgres-array@2.0.0: {}
@@ -4521,7 +4510,7 @@ snapshots:
     dependencies:
       typescript: 5.4.5
 
-  ts-node-dev@2.0.0(@types/node@20.12.7)(typescript@5.4.5):
+  ts-node-dev@2.0.0(@types/node@20.14.10)(typescript@5.4.5):
     dependencies:
       chokidar: 3.5.3
       dynamic-dedupe: 0.3.0
@@ -4531,7 +4520,7 @@ snapshots:
       rimraf: 2.7.1
       source-map-support: 0.5.21
       tree-kill: 1.2.2
-      ts-node: 10.9.2(@types/node@20.12.7)(typescript@5.4.5)
+      ts-node: 10.9.2(@types/node@20.14.10)(typescript@5.4.5)
       tsconfig: 7.0.0
       typescript: 5.4.5
     transitivePeerDependencies:
@@ -4539,14 +4528,14 @@ snapshots:
       - '@swc/wasm'
       - '@types/node'
 
-  ts-node@10.9.2(@types/node@20.12.7)(typescript@5.4.5):
+  ts-node@10.9.2(@types/node@20.14.10)(typescript@5.4.5):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.9
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.12.7
+      '@types/node': 20.14.10
       acorn: 8.11.3
       acorn-walk: 8.3.1
       arg: 4.1.3
