@@ -1,3 +1,4 @@
+import type { FastifyInstance } from 'fastify'
 import process from 'node:process'
 import fp from 'fastify-plugin'
 import { Pool } from 'pg'
@@ -15,6 +16,6 @@ export const pool = new Pool({
   password: process.env.DB_PASSWORD,
 })
 
-export default fp (async (fastify) => {
+export default fp (async (fastify: FastifyInstance) => {
   fastify.decorate('pg', pool)
 })

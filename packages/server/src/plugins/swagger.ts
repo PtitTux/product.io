@@ -1,8 +1,9 @@
-import fp from 'fastify-plugin'
+import type { FastifyInstance } from 'fastify'
 import fastifySwagger from '@fastify/swagger'
 import fastifySwaggerUI from '@fastify/swagger-ui'
+import fp from 'fastify-plugin'
 
-export default fp(async (fastify) => {
+export default fp(async (fastify: FastifyInstance) => {
   await fastify.register(fastifySwagger, {
     mode: 'dynamic',
     openapi: {
