@@ -4,7 +4,7 @@ import process from 'node:process'
 import { drizzle } from 'drizzle-orm/node-postgres'
 import fp from 'fastify-plugin'
 
-type DrizzleInstancePg = NodePgDatabase<Record<string, never>> & {
+export type DrizzleInstancePg = NodePgDatabase<Record<string, never>> & {
   $client: NodePgClient
 }
 
@@ -21,6 +21,7 @@ export const db = drizzle({
     database: process.env.DB_DATABASE,
     password: process.env.DB_PASSWORD,
   },
+  casing: 'snake_case',
 })
 
 export default fp (async (fastify: FastifyInstance) => {
