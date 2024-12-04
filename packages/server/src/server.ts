@@ -1,8 +1,8 @@
-import 'dotenv/config'
-import path from 'node:path'
 import type { FastifyInstance } from 'fastify'
-import Fastify from 'fastify'
+import path from 'node:path'
 import autoLoad from '@fastify/autoload'
+import Fastify from 'fastify'
+import 'dotenv/config'
 
 export async function build() {
   const fastify: FastifyInstance = Fastify({
