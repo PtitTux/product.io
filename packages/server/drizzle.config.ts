@@ -4,7 +4,7 @@ import 'dotenv/config'
 
 export default defineConfig({
   out: './dist/drizzle',
-  schema: './src/repositories/models',
+  schema: './app/repositories/models',
   dialect: 'postgresql',
   dbCredentials: {
     user: process.env.DB_USER!,
@@ -13,4 +13,5 @@ export default defineConfig({
     password: process.env.DB_PASSWORD!,
     ssl: false,
   },
+  casing: 'snake_case',
 })
