@@ -15,7 +15,7 @@ export async function build() {
   fastify.log.info(`Plugins ${(performance.now() - startPlugins).toFixed(2)} ms`)
 
   const startRoutes = performance.now()
-  await fastify.register(autoLoad, { dir: path.join(__dirname, 'routes') })
+  await fastify.register(autoLoad, { dir: path.join(__dirname, 'routes'), dirNameRoutePrefix: false })
   fastify.log.info(`Routes ${(performance.now() - startRoutes).toFixed(2)} ms`)
 
   return fastify

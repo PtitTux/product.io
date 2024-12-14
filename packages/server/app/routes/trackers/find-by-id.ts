@@ -18,9 +18,10 @@ export default async function handler(fastify: FastifyInstance) {
 
   fastify.get<{
     Params: IParams
-  }>('/:id', {
+  }>('/trackers/:id', {
     schema: {
       tags: ['trackers'],
+      description: 'Get Tracker by Id',
       params: Params,
     },
   }, async (request, reply) => {

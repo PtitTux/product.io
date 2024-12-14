@@ -6,8 +6,8 @@
     "moduleResolution": "Node",
     "paths": {
       "#Plugins/*": ["app/plugins/*"],
-      "#Models/*": ["app/repositories/models/*"],
-      "#Repositories/*": ["app/repositories/*"]
+      "#Models/*": ["app/db/models/*"],
+      "#Repositories/*": ["app/db/repositories/*"]
     },
     "resolveJsonModule": true,
     "strict": true,
