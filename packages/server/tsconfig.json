@@ -1,9 +1,14 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "baseUrl": "app",
+    "baseUrl": "./",
     "module": "CommonJS",
     "moduleResolution": "Node",
+    "paths": {
+      "#Plugins/*": ["app/plugins/*"],
+      "#Models/*": ["app/repositories/models/*"],
+      "#Repositories/*": ["app/repositories/*"]
+    },
     "strict": true,
     "noImplicitAny": true,
     "outDir": "./dist",

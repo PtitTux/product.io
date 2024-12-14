@@ -1,6 +1,6 @@
-import type { DrizzleInstancePg } from '../../app/plugins/drizzle'
+import type { DrizzleInstancePg } from '#Plugins/drizzle'
+import { type TrackerInsert, TrackerSchema } from '#Models/trackers'
 import { faker } from '@faker-js/faker'
-import { type TrackerInsert, TrackerSchema } from '../../app/repositories/models/trackers'
 
 export async function seedTrackers(drizzle: DrizzleInstancePg) {
   const datas: TrackerInsert[] = []

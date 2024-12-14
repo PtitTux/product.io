@@ -2,7 +2,7 @@
 import 'dotenv/config'
 import pino from 'pino'
 import { seedTrackers } from './trackers'
-import { db } from '../../app/plugins/drizzle'
+import { db } from '#Plugins/drizzle'
 
 const logger = pino({
   transport: {

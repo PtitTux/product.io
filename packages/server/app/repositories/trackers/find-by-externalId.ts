@@ -1,13 +1,13 @@
-import type { DrizzleInstancePg } from 'plugins/drizzle'
-import type { TrackerType } from 'repositories/models/trackers'
+import type { TrackerType } from '#Models/trackers'
+import type { DrizzleInstancePg } from '#Plugins/drizzle'
+import { TrackerSchema } from '#Models/trackers'
 import { eq } from 'drizzle-orm'
-import { TrackerSchema } from 'repositories/models/trackers'
 
-export async function findByExternalId(drizzle: DrizzleInstancePg, externalId: string): Promise<TrackerType | null> {
+export async function findByExternalId(drizzle: DrizzleInstancePg, externalId: string): Promise<TrackerType | undefined> {
   const trackers = await drizzle
     .select()
     .from(TrackerSchema)
     .where(eq(TrackerSchema.externalId, externalId))
 
-  return trackers.length > 0 ? trackers[0] : null
+  return trackers[0]
 }
