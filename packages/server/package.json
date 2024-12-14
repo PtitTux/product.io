@@ -10,7 +10,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
     "start": "node dist/app.js",
-    "dev": "tsnd --respawn --transpile-only --exit-child app/server.ts | pino-pretty --colorize"
+    "dev": "tsnd --respawn --transpile-only --exit-child app/server.ts | pino-pretty --colorize",
+    "drizzle:push": "drizzle-kit push",
+    "drizzle:seed": "tsnd tests/seed/index.ts"
   },
   "dependencies": {
     "@fastify/autoload": "5.8.0",
@@ -24,6 +26,7 @@
     "pino": "8.19.0"
   },
   "devDependencies": {
+    "@faker-js/faker": "9.3.0",
     "@types/node": "20.12.7",
     "@types/pg": "8.11.4",
     "drizzle-kit": "0.29.1",

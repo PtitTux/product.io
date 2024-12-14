@@ -13,3 +13,5 @@ export const TrackerSchema = pgTable('trackers', {
 })
 
 export type TrackerType = InferSelectModel<typeof TrackerSchema>
+
+export type TrackerInsert = typeof TrackerSchema.$inferInsert
