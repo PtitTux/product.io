@@ -15,7 +15,8 @@
     "preserveConstEnums": true,
     "removeComments": true,
     "sourceMap": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
   "include": [
     "app/**/*.ts",
@@ -23,9 +24,9 @@
     "drizzle.config.ts"
   ],
   "exclude": [
+    "node_modules",
     "**/*.spec.ts",
     "**/*.test.ts",
-    "**/*/__mocks__/*.ts",
-    "app/test/*.ts"
+    "**/*/__mocks__/*.ts"
   ]
 }
