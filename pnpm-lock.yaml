@@ -32,8 +32,11 @@ importers:
       '@fastify/swagger-ui':
         specifier: 3.0.0
         version: 3.0.0
+      '@fastify/type-provider-typebox':
+        specifier: 5.1.0
+        version: 5.1.0(@sinclair/typebox@0.34.11)
       '@sinclair/typebox':
-        specifier: ^0.34.11
+        specifier: 0.34.11
         version: 0.34.11
       dotenv:
         specifier: 16.4.5
@@ -540,6 +543,11 @@ packages:
 
   '@fastify/swagger@8.14.0':
     resolution: {integrity: sha512-sGiznEb3rl6pKGGUZ+JmfI7ct5cwbTQGo+IjewaTvtzfrshnryu4dZwEsjw0YHABpBA+kCz3kpRaHB7qpa67jg==}
+
+  '@fastify/type-provider-typebox@5.1.0':
+    resolution: {integrity: sha512-F1AQHeLiKp1hu6GMWm5W6fZ6zXQ0mTV+qHOzrptAie9AYewvFr5Q3blfy8Qmx9gUgwA3Yj+CWvQQJeTwDgTnIg==}
+    peerDependencies:
+      '@sinclair/typebox': '>=0.26 <=0.34'
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -3026,6 +3034,10 @@ snapshots:
       yaml: 2.6.1
     transitivePeerDependencies:
       - supports-color
+
+  '@fastify/type-provider-typebox@5.1.0(@sinclair/typebox@0.34.11)':
+    dependencies:
+      '@sinclair/typebox': 0.34.11
 
   '@humanfs/core@0.19.1': {}
 
