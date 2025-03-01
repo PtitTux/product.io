@@ -8,7 +8,11 @@ import 'dotenv/config'
 export async function build() {
   const fastify: FastifyInstance = Fastify({
     logger: true,
-  }).setValidatorCompiler(validatorCompiler).setSerializerCompiler(serializerCompiler)
+  })
+
+  // Add schema validator and serializer
+  fastify.setValidatorCompiler(validatorCompiler)
+  fastify.setSerializerCompiler(serializerCompiler)
 
   const startPlugins = performance.now()
   await fastify.register(autoLoad, { dir: path.join(__dirname, 'plugins') })

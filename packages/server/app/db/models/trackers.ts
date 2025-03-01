@@ -1,6 +1,6 @@
 import type { InferSelectModel } from 'drizzle-orm'
 import { pgTable, text, varchar } from 'drizzle-orm/pg-core'
-import { createSelectSchema } from 'drizzle-zod'
+import { createInsertSchema, createSelectSchema } from 'drizzle-zod'
 import { id, timestamps } from './hooks'
 
 export const TrackerTable = pgTable('trackers', {
@@ -20,3 +20,4 @@ export const TrackerSchema = createSelectSchema(TrackerTable)
 
 export const TrackerSchemaList = TrackerSchema.omit({ internalId: true, deletedAt: true })
 export const TrackerSchemaGet = TrackerSchema.omit({ internalId: true })
+export const TrackerSchemaPost = createInsertSchema(TrackerTable).omit({ id: true, deletedAt: true, createdAt: true, updatedAt: true }).strict()
