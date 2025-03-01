@@ -1,20 +1,25 @@
-import 'dotenv/config'
-import path from 'node:path'
 import type { FastifyInstance } from 'fastify'
-import Fastify from 'fastify'
+import path from 'node:path'
 import autoLoad from '@fastify/autoload'
+import Fastify from 'fastify'
+import { serializerCompiler, validatorCompiler } from 'fastify-type-provider-zod'
+import 'dotenv/config'
 
 export async function build() {
   const fastify: FastifyInstance = Fastify({
     logger: true,
   })
 
+  // Add schema validator and serializer
+  fastify.setValidatorCompiler(validatorCompiler)
+  fastify.setSerializerCompiler(serializerCompiler)
+
   const startPlugins = performance.now()
   await fastify.register(autoLoad, { dir: path.join(__dirname, 'plugins') })
   fastify.log.info(`Plugins ${(performance.now() - startPlugins).toFixed(2)} ms`)
 
   const startRoutes = performance.now()
-  await fastify.register(autoLoad, { dir: path.join(__dirname, 'routes') })
+  await fastify.register(autoLoad, { dir: path.join(__dirname, 'routes'), dirNameRoutePrefix: false })
   fastify.log.info(`Routes ${(performance.now() - startRoutes).toFixed(2)} ms`)
 
   return fastify

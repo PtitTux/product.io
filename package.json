@@ -13,13 +13,10 @@
     "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "2.22.0",
-    "eslint": "8.57.0",
-    "lint-staged": "15.2.2",
-    "simple-git-hooks": "2.11.1"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
+    "@antfu/eslint-config": "3.11.2",
+    "eslint": "9.16.0",
+    "husky": "9.1.7",
+    "lint-staged": "15.2.10"
   },
   "lint-staged": {
     "*": "eslint --fix"

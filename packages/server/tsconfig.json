@@ -1,25 +1,33 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "module": "CommonJS",
     "moduleResolution": "Node",
+    "paths": {
+      "#Plugins/*": ["app/plugins/*"],
+      "#Models/*": ["app/db/models/*"],
+      "#Repositories/*": ["app/db/repositories/*"]
+    },
+    "resolveJsonModule": true,
     "strict": true,
     "noImplicitAny": true,
     "outDir": "./dist",
     "preserveConstEnums": true,
     "removeComments": true,
     "sourceMap": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
   "include": [
-    "src/**/*.ts",
-    "api/**/*.ts"
+    "app/**/*.ts",
+    "tests/**/*.ts",
+    "drizzle.config.ts"
   ],
   "exclude": [
+    "node_modules",
     "**/*.spec.ts",
     "**/*.test.ts",
-    "**/*/__mocks__/*.ts",
-    "src/test/*.ts"
+    "**/*/__mocks__/*.ts"
   ]
 }
