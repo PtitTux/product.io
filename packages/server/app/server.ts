@@ -1,14 +1,14 @@
 import type { FastifyInstance } from 'fastify'
 import path from 'node:path'
 import autoLoad from '@fastify/autoload'
-import { TypeBoxValidatorCompiler } from '@fastify/type-provider-typebox'
 import Fastify from 'fastify'
+import { serializerCompiler, validatorCompiler } from 'fastify-type-provider-zod'
 import 'dotenv/config'
 
 export async function build() {
   const fastify: FastifyInstance = Fastify({
     logger: true,
-  }).setValidatorCompiler(TypeBoxValidatorCompiler)
+  }).setValidatorCompiler(validatorCompiler).setSerializerCompiler(serializerCompiler)
 
   const startPlugins = performance.now()
   await fastify.register(autoLoad, { dir: path.join(__dirname, 'plugins') })

@@ -1,4 +1,4 @@
-import { timestamp, uuid } from 'drizzle-orm/pg-core'
+import { integer, timestamp, uuid } from 'drizzle-orm/pg-core'
 
 export const timestamps = {
   updatedAt: timestamp(),
@@ -6,6 +6,7 @@ export const timestamps = {
   deletedAt: timestamp(),
 }
 
-export const externalId = {
-  externalId: uuid().defaultRandom().notNull(),
+export const id = {
+  id: uuid().defaultRandom().notNull(),
+  internalId: integer().primaryKey().generatedAlwaysAsIdentity(),
 }

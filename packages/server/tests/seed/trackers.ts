@@ -1,12 +1,12 @@
 import type { DrizzleInstancePg } from '#Plugins/drizzle'
-import { type TrackerInsert, TrackerSchema } from '#Models/trackers'
+import { type TrackerInsert, TrackerTable } from '#Models/trackers'
 import { faker } from '@faker-js/faker'
 
 export async function seedTrackers(drizzle: DrizzleInstancePg) {
   const datas: TrackerInsert[] = []
 
   // Reset datas
-  await drizzle.delete(TrackerSchema)
+  await drizzle.delete(TrackerTable)
 
   for (let i = 0; i < 30; i++) {
     datas.push({
@@ -17,5 +17,5 @@ export async function seedTrackers(drizzle: DrizzleInstancePg) {
     })
   }
 
-  await drizzle.insert(TrackerSchema).values(datas)
+  await drizzle.insert(TrackerTable).values(datas)
 }
