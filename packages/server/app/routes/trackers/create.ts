@@ -24,8 +24,6 @@ export default async function handler(fastify: FastifyInstance) {
       },
     },
   }, async (request, reply) => {
-    TrackerSchemaPost.safeParse(request.body)
-
     const tracker = await create(fastify.db, request.body)
     reply.code(201).send(tracker)
   })
